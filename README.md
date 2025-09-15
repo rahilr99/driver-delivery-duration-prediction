@@ -1,7 +1,5 @@
 # DoorDash Delivery Duration Prediction
 
-## Overview
-
 This repository contains a take‑home project for predicting delivery duration (in seconds) for DoorDash orders. The notebook implements two modeling tracks: a direct regression on total delivery time and a two‑stage approach that first predicts preparation time and then reconstructs total duration by adding provided sub‑stage estimates.
 
 
