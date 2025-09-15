@@ -4,7 +4,6 @@
 
 This repository contains a take‑home project for predicting delivery duration (in seconds) for DoorDash orders. The notebook implements two modeling tracks: a direct regression on total delivery time and a two‑stage approach that first predicts preparation time and then reconstructs total duration by adding provided sub‑stage estimates.
 
-Assignment source: fileciteturn3file0
 
 ## Problem statement
 
@@ -13,7 +12,7 @@ Given historical order‑level data, predict the total time from order creation 
 * `estimated_order_place_duration`
 * `estimated_store_to_consumer_driving_duration`
 
-Target to predict: `total_delivery_time = (actual_delivery_time − created_at)` in seconds. fileciteturn3file0
+Target to predict: `total_delivery_time = (actual_delivery_time − created_at)` in seconds. 
 
 ## Data
 
@@ -69,13 +68,8 @@ Single CSV expected at `datasets/historical_data.csv` with columns described in 
   * Linear/Ridge regression on the final step achieves RMSE ≈ 1002 seconds on the same random 80/20 split.
   * DecisionTree and RandomForest variants underperform the linear baselines on the final calibration step (e.g., RF RMSE ≈ 1541 s).
 
-## What’s strong
 
-* Sensible decomposition of the problem into sub‑stages, leveraging provided sub‑stage predictions.
-* Useful engineered features that normalize across order size and item mix (`avg_price_per_item`, `percent_distinct_item_of_total`, `price_range_of_items`).
-* Sanity checks on multicollinearity (VIF) and a feature‑importance pass to constrain the model’s complexity.
-
-## Limitations (plain-language)
+## Limitations 
 
 1. Train/test split mixes old and new orders
 * We randomly split the data. That lets the model learn patterns from the future. Real life moves forward in time, so the score here likely looks better than what we would see in production.
@@ -124,4 +118,4 @@ Single CSV expected at `datasets/historical_data.csv` with columns described in 
 
 ## License
 
-For educational/portfolio use only. Not affiliated with DoorDash.
+For educational/portfolio use only.
