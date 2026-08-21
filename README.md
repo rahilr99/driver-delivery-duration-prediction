@@ -14,7 +14,7 @@ Target to predict: `total_delivery_time = (actual_delivery_time − created_at)`
 
 ## Data
 
-Single CSV expected at `datasets/historical_data.csv` with columns described in the brief (time, store, order, marketplace features, and auxiliary predictions). Values are seconds for durations and cents for currency. fileciteturn3file0
+Single CSV expected at `datasets/historical_data.csv` with columns described in the brief (time, store, order, marketplace features, and auxiliary predictions). Values are seconds for durations and cents for currency.
 
 ## Repository structure
 
